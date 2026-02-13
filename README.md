@@ -26,4 +26,12 @@ Add current user to the group and reboot
 sudo usermod -a -G dialout $USER
 ```
 
+or
+
+```
+curl -fsSL https://raw.githubusercontent.com/platformio/platformio-core/develop/platformio/assets/system/99-platformio-udev.rules | sudo tee /etc/udev/rules.d/99-platformio-udev.rules
+sudo systemctl daemon-reload
+
+```
+
 
